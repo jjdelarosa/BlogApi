@@ -1,7 +1,7 @@
 {
-  "name": "firstnodeapi",
+  "name": "Blogapi",
   "version": "1.0.0",
-  "description": "First Node App",
+  "description": "Blog Node REST API",
   "main": "./src/index.js",
   "license": "MIT",
   "scripts": {
