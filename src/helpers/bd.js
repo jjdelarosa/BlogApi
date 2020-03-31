@@ -9,7 +9,7 @@ const db = knex({
 })
 
 const createTables = async () => {
-    !(await bd.schema.hasTable('posts'))
+    !(await db.schema.hasTable('posts'))
     ? await db.schema.createTable('posts', table => {
         table.increments().primary()
         table.string('title')
