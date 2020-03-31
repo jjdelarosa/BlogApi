@@ -4,6 +4,7 @@ import cors from 'cors'
 import helmet from 'helmet'
 import pino from 'express-pino-logger'
 import { notFound, errorHandler } from './helpers/errors'
+import router from './routes'
 const app = express()
 const port = parseInt(process.env.PORT)
 
@@ -12,10 +13,9 @@ app.use(helmet())
 app.use(pino())
 app.use(express.json())
 
+app.use(router)
 
-app.use('/', (req,res) => {
-    res.json({msg:'Hello There',type: req.method})
-})
+
 
 app.use(notFound)
 app.use(errorHandler)
